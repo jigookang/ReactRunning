@@ -6,26 +6,26 @@ import { useRouter } from 'next/navigation';
 // 상수 정의
 const STYLES = {
   container: {
-    main: "min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100",
-    card: "max-w-xs w-full mx-4 bg-white rounded-xl shadow-lg overflow-hidden",
+    main: "min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800",
+    card: "max-w-xs w-full mx-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden",
     formContainer: "p-4",
   },
   header: {
-    container: "bg-indigo-600 p-4",
+    container: "bg-indigo-600 dark:bg-indigo-700 p-4",
     icon: "w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-3",
-    title: "text-xl font-bold",
-    subtitle: "text-center text-xs mt-[8px]",
+    title: "text-xl font-bold text-gray-900 dark:text-white",
+    subtitle: "text-center text-xs text-white/80 mt-[8px]",
   },
   form: {
     container: "space-y-4",
     inputContainer: "flex justify-center",
     inputWrapper: "w-[350px]",
-    label: "block text-xs font-medium text-gray-700",
-    input: "mt-1 block w-full h-[48px] px-7 border border-gray-300 rounded-[4px] shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-xs",
-    button: "mt-[16px] w-full h-[56px] flex items-center justify-center border border-transparent rounded-[4px] shadow-sm text-xs font-medium text-[#ffffff] bg-[#2563eb] hover:bg-[#1d4ed8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2563eb]",
+    label: "block text-xs font-medium text-gray-700 dark:text-gray-300",
+    input: "mt-1 block w-full h-[48px] px-7 border border-gray-300 dark:border-gray-600 rounded-[4px] shadow-sm focus:ring-indigo-500 focus:border-indigo-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-xs",
+    button: "mt-[16px] w-full h-[56px] flex items-center justify-center border border-transparent rounded-[4px] shadow-sm text-xs font-medium text-white bg-[#2563eb] hover:bg-[#1d4ed8] dark:bg-indigo-600 dark:hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2563eb] dark:focus:ring-indigo-500",
     linkContainer: "text-center mt-[24px]",
-    linkText: "text-xs text-gray-600",
-    link: "font-medium text-[#ffffff] hover:text-[#ffffff]",
+    linkText: "text-xs text-gray-600 dark:text-gray-400",
+    link: "font-medium text-blue-600 dark:text-white hover:text-blue-500 dark:hover:text-gray-300",
   },
   spacing: {
     inputMargin: "mt-[14px]",
