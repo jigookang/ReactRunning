@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import ThemeToggle from '../components/ThemeToggle';
 
 // 상수 정의
@@ -193,9 +194,9 @@ export default function SignUp() {
               <div className={STYLES.form.linkContainer}>
                 <p className={STYLES.form.linkText}>
                   이미 계정이 있으신가요?{' '}
-                  <a href="/login" className={STYLES.form.link}>
+                  <Link href="/login" className={STYLES.form.link}>
                     로그인
-                  </a>
+                  </Link>
                 </p>
               </div>
             </form>
