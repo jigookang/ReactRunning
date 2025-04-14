@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import ThemeToggle from '../components/ThemeToggle';
 
 // 상수 정의
 const STYLES = {
@@ -96,56 +97,61 @@ export default function Login() {
   };
 
   return (
-    <div className={STYLES.container.main}>
-      <div className={STYLES.container.card}>
-        <div className="flex flex-col">
-          <Header />
-          
-          <div className={STYLES.container.formContainer}>
-            <form onSubmit={handleSubmit} className={STYLES.form.container}>
-              <Input
-                id="email"
-                label="이메일"
-                type="email"
-                placeholder="이메일을 입력하세요"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-
-              <div className={STYLES.spacing.inputMargin}>
+    <>
+      <div className="fixed top-4 right-4">
+        <ThemeToggle />
+      </div>
+      <div className={STYLES.container.main}>
+        <div className={STYLES.container.card}>
+          <div className="flex flex-col">
+            <Header />
+            
+            <div className={STYLES.container.formContainer}>
+              <form onSubmit={handleSubmit} className={STYLES.form.container}>
                 <Input
-                  id="password"
-                  label="비밀번호"
-                  type="password"
-                  placeholder="비밀번호를 입력하세요"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  id="email"
+                  label="이메일"
+                  type="email"
+                  placeholder="이메일을 입력하세요"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
-              </div>
 
-              <div className={STYLES.form.inputContainer}>
-                <div className={STYLES.form.inputWrapper}>
-                  <button
-                    type="submit"
-                    className={STYLES.form.button}
-                  >
-                    로그인
-                  </button>
+                <div className={STYLES.spacing.inputMargin}>
+                  <Input
+                    id="password"
+                    label="비밀번호"
+                    type="password"
+                    placeholder="비밀번호를 입력하세요"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
                 </div>
-              </div>
 
-              <div className={STYLES.form.linkContainer}>
-                <p className={STYLES.form.linkText}>
-                  계정이 없으신가요?{' '}
-                  <a href="#" className={STYLES.form.link}>
-                    회원가입
-                  </a>
-                </p>
-              </div>
-            </form>
+                <div className={STYLES.form.inputContainer}>
+                  <div className={STYLES.form.inputWrapper}>
+                    <button
+                      type="submit"
+                      className={STYLES.form.button}
+                    >
+                      로그인
+                    </button>
+                  </div>
+                </div>
+
+                <div className={STYLES.form.linkContainer}>
+                  <p className={STYLES.form.linkText}>
+                    계정이 없으신가요?{' '}
+                    <a href="/signup" className={STYLES.form.link}>
+                      회원가입
+                    </a>
+                  </p>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 } 
